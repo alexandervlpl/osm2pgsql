@@ -818,12 +818,7 @@ void parse_o5m_t::stream_file(const std::string &filename, osmdata_t *osmdata) {
       continue;  /* end processing for this object */
     }  /* end   delete request */
     else {  /* not a delete request */
-
-        /* determine action */
-      if(filetype==FILETYPE_OSMCHANGE && hisver>1)
-        action= ACTION_MODIFY;
-      else
-        action= ACTION_CREATE;
+      action= ACTION_CREATE;
 
       /* read coordinates (for nodes only) */
       if(otype==0) {  /* node */
