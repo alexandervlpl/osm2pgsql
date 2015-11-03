@@ -1,4 +1,6 @@
-# osm2pgsql #
+# osm2pgsql : True Append Version #
+
+**This is a simple fork of osm2pgsql that allows extending an existing dataset in PostGIS by safely handling duplicate OSM ID's in adjacent/overlapping input areas.** For example, two adjacent countries that share ways (like roads) can be imported separately into the same database with `--append`. Adding a feature that already exists in the database simply overwrites (updates) that feature. Note: this version is slower than the standard osm2pgsql, due to the performance of the SQL queries used.
 
 osm2pgsql is a tool for loading OpenStreetMap data into a PostgreSQL / PostGIS
 database suitable for applications like rendering into a map, geocoding with
